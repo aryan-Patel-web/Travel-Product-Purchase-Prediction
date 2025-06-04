@@ -35,27 +35,31 @@ joblib
 🧪 Sample Input (Will NOT Buy Product)
 You can test the app using the following input values:
 
-Field	Value
-Customer ID	1001
-Age	21
-Type of Contact	Self Enquiry
-City Tier	3
-Duration of Pitch	2.0
-Occupation	Free Lancer
-Gender	Male
-Number of Person Visiting	1
-Number of Followups	0
-Product Pitched	Basic
-Preferred Property Star	1
-Marital Status	Unmarried
-Number of Trips	1
-Passport	No (0)
-Pitch Satisfaction Score	1
-Own Car	No (0)
-Number of Children Visiting	0
-Designation	Executive
-Monthly Income	8000
-Total Visiting	1
+### 🧪 Sample Input (Will NOT Buy Product)
+
+| Field                         | Value           |
+|------------------------------|-----------------|
+| Customer ID                  | 1001            |
+| Age                          | 21              |
+| Type of Contact              | Self Enquiry    |
+| City Tier                    | 3               |
+| Duration of Pitch            | 2.0             |
+| Occupation                   | Free Lancer     |
+| Gender                       | Male            |
+| Number of Person Visiting    | 1               |
+| Number of Followups          | 0               |
+| Product Pitched              | Basic           |
+| Preferred Property Star      | 1               |
+| Marital Status               | Unmarried       |
+| Number of Trips              | 1               |
+| Passport                     | No (0)          |
+| Pitch Satisfaction Score     | 1               |
+| Own Car                      | No (0)          |
+| Number of Children Visiting  | 0               |
+| Designation                  | Executive       |
+| Monthly Income               | 8000            |
+| Total Visiting               | 1               |
+
 
 Expected Result:
 
