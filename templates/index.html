@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Product Purchase Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 7px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            background-color: #0288d1;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0277bd;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2>Travel Product Purchase Prediction</h2>
+    <form method="POST">
+        <!-- Form Fields (unchanged) -->
+        <label>Customer ID:</label><input type="number" name="CustomerID" required placeholder="Enter Customer ID">
+        <label>Age:</label><input type="number" step="1" name="Age" required placeholder="e.g. 30">
+        <label>Type of Contact:</label>
+        <select name="TypeofContact" required>
+            <option value="Self Enquiry">Self Enquiry</option>
+            <option value="Company Invited">Company Invited</option>
+        </select>
+        <label>City Tier:</label><input type="number" name="CityTier" required min="1" max="3">
+        <label>Duration Of Pitch (minutes):</label><input type="number" step="any" name="DurationOfPitch" required>
+        <label>Occupation:</label>
+        <select name="Occupation" required>
+            <option value="Salaried">Salaried</option>
+            <option value="Small Business">Small Business</option>
+            <option value="Large Business">Large Business</option>
+            <option value="Free Lancer">Free Lancer</option>
+        </select>
+        <label>Gender:</label>
+        <select name="Gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <label>Number Of Person Visiting:</label><input type="number" name="NumberOfPersonVisiting" required>
+        <label>Number Of Followups:</label><input type="number" step="1" name="NumberOfFollowups" required>
+        <label>Product Pitched:</label>
+        <select name="ProductPitched" required>
+            <option value="Basic">Basic</option>
+            <option value="Standard">Standard</option>
+            <option value="Deluxe">Deluxe</option>
+            <option value="Super Deluxe">Super Deluxe</option>
+            <option value="King">King</option>
+        </select>
+        <label>Preferred Property Star:</label><input type="number" name="PreferredPropertyStar" min="1" max="5" required>
+        <label>Marital Status:</label>
+        <select name="MaritalStatus" required>
+            <option value="Unmarried">Unmarried</option>
+            <option value="Married">Married</option>
+            <option value="Divorced">Divorced</option>
+        </select>
+        <label>Number Of Trips:</label><input type="number" step="1" name="NumberOfTrips" required>
+        <label>Passport:</label>
+        <select name="Passport" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+        <label>Pitch Satisfaction Score (1-5):</label><input type="number" name="PitchSatisfactionScore" min="1" max="5" required>
+        <label>Own Car:</label>
+        <select name="OwnCar" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+        <label>Number Of Children Visiting:</label><input type="number" name="NumberOfChildrenVisiting" required>
+        <label>Designation:</label>
+        <select name="Designation" required>
+            <option value="Executive">Executive</option>
+            <option value="Manager">Manager</option>
+            <option value="Senior Manager">Senior Manager</option>
+            <option value="AVP">AVP</option>
+            <option value="VP">VP</option>
+        </select>
+        <label>Monthly Income:</label><input type="number" step="any" name="MonthlyIncome" required>
+        <label>Total Visiting:</label><input type="number" name="TotalVisiting" required>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            Prediction: {{ prediction }}
+        </div>
+    {% endif %}
+</body>
+</html>
